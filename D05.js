@@ -98,4 +98,4 @@ function appendExclamation(str) {
 }
 
 const result3 = composeFunctions(toUpperCase, appendExclamation, 0 )
-console.log(result3);
+console.log(result3); 
