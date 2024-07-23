@@ -5,7 +5,7 @@
 // Task 1: Write a program to print numbers from 1 to 10 using a for loop.
 for (let num = 0; num <= 10; num++) {
     const element = num;
-    console.log(element);
+    console.log(element); 
 }
 // Output: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10.
 
