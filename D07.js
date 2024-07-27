@@ -49,27 +49,28 @@ console.log(book);
 // Activity 3: Nested Objects
 // Task 5: Create a nested object representing a library with properties like name and books (an array of book objects). and log the library object to the console
 const library = {
-    name:"Library",
+    name:"myLibrary",
     books: [book1, book2]
 }
 console.log(library);
 
 // Task 6: Access and log the name of the library and the titles of all the books in library. (Need to work on this task => it is incomplete)
 
-// Log the name of the library                     
-console.log("Library Name:", library.name);
-// Log the titles of all the books in the library
-console.log("Book Titles:");
-library.books.forEach(book => { 
-    console.log(book.title);
-});
-
+console.log(`The Library name is ${library['name']}`);
+for (const element of library.books) {
+    console.log(element);
+}
 // --------------------------------------------------------------------------------
 
 // Activity 4: The this keyword
 // Task 7: Add a method to the book object that uses the 'this' keyword to return a string with the books title and year and log the result of calling this method. 
-
+book.getTitleAndYear = function() {
+    return this.Title + "(" + this.year + ")";
+};
+console.log(book.getTitleAndYear());
 // Actvity 5: Object Iteration
 // Task 8: Use a 'for...in' loop to iterate over the properties of the book object and log each property and its value.
-
+for (let property in book) {
+    console.log(`${property} : ${book[property]}`);
+}
 // Task 9: Use 'Object..keys' and 'Object.values' methods to log all the keys and values of the book object
