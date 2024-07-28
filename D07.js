@@ -54,8 +54,7 @@ const library = {
 }
 console.log(library);
 
-// Task 6: Access and log the name of the library and the titles of all the books in library. (Need to work on this task => it is incomplete)
-
+// Task 6: Access and log the name of the library and the titles of all the books in library.
 console.log(`The Library name is ${library['name']}`);
 for (const element of library.books) {
     console.log(element);
@@ -65,7 +64,7 @@ for (const element of library.books) {
 // Activity 4: The this keyword
 // Task 7: Add a method to the book object that uses the 'this' keyword to return a string with the books title and year and log the result of calling this method. 
 book.getTitleAndYear = function() {
-    return this.Title + "(" + this.year + ")";
+    return `${this.Title}  (${this.year})`;
 };
 console.log(book.getTitleAndYear());
 // Actvity 5: Object Iteration
@@ -74,3 +73,5 @@ for (let property in book) {
     console.log(`${property} : ${book[property]}`);
 }
 // Task 9: Use 'Object..keys' and 'Object.values' methods to log all the keys and values of the book object
+console.log("Keys: ", Object.keys(book));
+console.log("Values: ", Object.values(book));
